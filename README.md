@@ -55,15 +55,15 @@ Add Pushmote.Start call to MainActivity.cs
 			Pushmote.Start(Pushmote.HWProvider.Estimote, this, "YOUR_APP_KEY");
   	}
   	
-  	protected override void OnStart (Bundle savedInstanceState)
+  	protected override void OnStart ()
 		{
-			base.OnStart (savedInstanceState);
+			base.OnStart ();
 			Pushmote.BringToForeground ();
 		}
 
-		protected override void OnStop (Bundle savedInstanceState)
+		protected override void OnStop ()
 		{
-			base.OnStop (savedInstanceState);
+			base.OnStop ();
 			Pushmote.SendToBackground ();
 		}
 
